@@ -3,4 +3,8 @@ class ShoppingListsController < ApplicationController
     @shopping_lists = ShoppingList.all
   end
 
+  def new
+    @shopping_list = ShoppingList.new
+  end
+
 end
