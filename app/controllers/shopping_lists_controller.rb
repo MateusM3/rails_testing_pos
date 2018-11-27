@@ -12,6 +12,9 @@ class ShoppingListsController < ApplicationController
     @shopping_list = ShoppingList.new
   end
 
+  def edit
+  end
+
   def create
     @shopping_list = ShoppingList.new(shopping_list_params)
 
