@@ -5,6 +5,9 @@ class ShoppingListsController < ApplicationController
     @shopping_lists = ShoppingList.all
   end
 
+  def show
+  end
+
   def new
     @shopping_list = ShoppingList.new
   end
