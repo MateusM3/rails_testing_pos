@@ -21,7 +21,7 @@ class ShoppingListsController < ApplicationController
     respond_to do |format|
       if @shopping_list.save
         format.html {redirect_to shopping_list_url(@shopping_list),
-                                 notice: 'Shopping Lists was successfully created.'}
+                                 notice: 'Shopping List was successfully created.'}
         format.json {render :show, status: :created, location: @shopping_list}
       else
         format.html {render :new}
@@ -33,7 +33,7 @@ class ShoppingListsController < ApplicationController
   def update
     respond_to do |format|
       if @shopping_list.update(shopping_list_params)
-        format.html {redirect_to @shopping_list, notice: 'Shopping Lists was successfully updated.'}
+        format.html {redirect_to @shopping_list, notice: 'Shopping List was successfully updated.'}
         format.json {render :show, status: :ok, location: @shopping_list}
       else
         format.html {render :edit}
