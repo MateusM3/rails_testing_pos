@@ -30,6 +30,18 @@ class ShoppingListsController < ApplicationController
     end
   end
 
+  def update
+    respond_to do |format|
+      if @shopping_list.update(shopping_list_params)
+        format.html {redirect_to @shopping_list, notice: 'Shopping Lists was successfully updated.'}
+        format.json {render :show, status: :ok, location: @shopping_list}
+      else
+        format.html {render :edit}
+        format.json {render json: @shopping_list.errors, status: :unprocessable_entity}
+      end
+    end
+  end
+
   def destroy
     @shopping_list.destroy
     respond_to do |format|
