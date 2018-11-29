@@ -10,4 +10,19 @@
   <%= @shopping_list.was_bought %>
 </p>
 
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Quantity</th>
+  </tr>
+  <strong>Products:</strong>
+
+  <% @shopping_list.products.each do |product| %>
+    <tr>
+      <th><%= product.name %></th>
+      <th><%= product.quantity %></th>
+    </tr>
+  <% end %>
+</table>
+
 <%= link_to 'Back', shopping_lists_path %>
