@@ -26,6 +26,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #bootstrap
 gem 'bootstrap', '~> 4.1.3'
 
+#FontAwesome
+gem 'font-awesome-sass', '~> 5.5.0'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
