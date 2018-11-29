@@ -15,11 +15,12 @@
     <tr>
       <td><%= shopping_list.title %></td>
       <td><%= shopping_list.was_bought %></td>
-      <td><%= link_to 'Show', shopping_list %></td>
-      <td><%= link_to 'Edit', edit_shopping_list_path(shopping_list) %></td>
-      <td><%= link_to 'Destroy', shopping_list, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+      <td><%= link_to icon('fas', 'eye'), shopping_list %></td>
+      <td><%= link_to icon('fas', 'edit'), edit_shopping_list_path(shopping_list) %></td>
+      <td><%= link_to icon('fas', 'trash-alt'), shopping_list, method: :delete, data: {confirm: 'Are you sure?'} %></td>
     </tr>
   <% end %>
   </tbody>
 </table>
+
 <%= link_to 'New Shopping List', new_shopping_list_path %>
