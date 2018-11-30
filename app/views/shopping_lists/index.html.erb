@@ -1,4 +1,6 @@
-<p id="notice"><%= notice %></p>
+<div class="alert alert-warning alert-dismissible fade show " role="alert">
+  <%= notice %>
+</div>
 
 <h2>Shopping Lists</h2>
 <table class="table table-striped table-hover">
@@ -14,7 +16,12 @@
   <% @shopping_lists.each do |shopping_list| %>
     <tr>
       <td><%= shopping_list.title %></td>
-      <td><%= shopping_list.was_bought %></td>
+      <td>
+        <% if shopping_list.was_bought %>
+          <i class="fas fa-cart-arrow-down"></i>
+        <% end %>
+        <i class="times-circle"></i>
+      </td>
       <td><%= link_to icon('fas', 'eye'), shopping_list %></td>
       <td><%= link_to icon('fas', 'edit'), edit_shopping_list_path(shopping_list) %></td>
       <td><%= link_to icon('fas', 'trash-alt'), shopping_list, method: :delete, data: {confirm: 'Are you sure?'} %></td>
@@ -23,4 +30,4 @@
   </tbody>
 </table>
 
-<%= link_to 'New Shopping List', new_shopping_list_path %>
+<%= link_to 'New Shopping List', new_shopping_list_path, :class => "add_shopping_list" %>
