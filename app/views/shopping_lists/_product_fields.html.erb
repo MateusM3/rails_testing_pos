@@ -1,8 +1,14 @@
-<p class="fields">
+<div class="form-row fields">
+  <div class="form-group col-md-6">
   <%= f.label :name, "Name" %>
-  <%= f.text_field :name %>
-  <%= f.label :quantity, "Quantity" %>
-  <%= f.number_field :quantity %>
-  <%= f.hidden_field :_destroy %>
-  <%= link_to_remove_fields icon('fas', 'trash-alt'), f %>
-</p>
+  <%= f.text_field :name, class: 'form-control'%>
+  </div>
+  <div class="form-group col-md-4">
+    <%= f.label :quantity, "Quantity" %>
+    <%= f.number_field :quantity,class: 'form-control' %>
+  </div>
+  <div class="form-group col-md-2">
+    <%= f.hidden_field :_destroy %>
+    <%= link_to_remove_fields icon('fas', 'trash-alt'), f %>
+  </div>
+</div>
