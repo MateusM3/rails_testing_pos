@@ -1,4 +1,7 @@
-<p id="notice"><%= notice %></p>
+<div class="alert alert-warning alert-dismissible fade show " role="alert">
+  <%= notice %>
+</div>
+
 
 <p>
   <strong>Title:</strong>
@@ -7,10 +10,12 @@
 
 <p>
   <strong>was bought:</strong>
-  <%= @shopping_list.was_bought %>
+  <% if @shopping_list.was_bought %>
+    <i class="fas fa-cart-arrow-down"></i>
+  <% end %>
 </p>
 
-<table>
+<table class="table">
   <tr>
     <th>Name</th>
     <th>Quantity</th>
