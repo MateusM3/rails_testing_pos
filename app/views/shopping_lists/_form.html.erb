@@ -10,11 +10,11 @@
       </ul>
     </div>
   <% end %>
-  <div class="field">
+   <div class="form-group">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title , class: 'form-control',:required => true%>
   </div>
-  <div class="field">
+   <div class="form-group">
     <%= f.label :was_bought %><br>
     <%= f.check_box :was_bought, {}, true, false %>
   </div>
@@ -24,7 +24,10 @@
     <%= render "product_fields", f: builder %>
   <% end %>
 
-    <p><%= link_to_add_fields "Add Product", f, :products %></p>
+    <div class="add-products">
+      <i class="fas fa-cart-plus"></i>
+      <%= link_to_add_fields "Add Product", f, :products %>
+    </div>
 
   <div class="actions">
     <%= f.submit %>
